@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "970ed28c-319f-4fa8-9706-33d5a37eab05",
+		"name": "API Pichincha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7945652"
+	},
+	"item": [
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "GET Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55721/api/ObtenerCuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"ObtenerCuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Cuentas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nro_Cuenta\": \"22564\",\r\n  \"tipo_Cuenta\": \"C\",\r\n  \"saldo_Inicial\": 20,\r\n  \"estado\": false,\r\n  \"id_Cliente\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55721/api/AgregarCuenta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"AgregarCuenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Cuentas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_Cuenta\": 3,\r\n  \"nro_Cuenta\": \"22563\",\r\n  \"tipo_Cuenta\": \"A\",\r\n  \"saldo_Inicial\": 25,\r\n  \"saldo_Disponible\": 0,\r\n  \"estado\": false,\r\n  \"id_Cliente\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55721/api/actualizarCuenta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"actualizarCuenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Cuentas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55721/api/eliminarCuenta/45",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"eliminarCuenta",
+								"45"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Get Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55721/api/ObtenerClientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"ObtenerClientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Elizabeth\",\r\n  \"genero\": \"F\",\r\n  \"edad\": 34,\r\n  \"identificacion\": \"17052\",\r\n  \"direccion\": \"Ibarra\",\r\n  \"telefono\": \"953956\",\r\n  \"id_Cliente\": 0,\r\n  \"password\": \"1234\",\r\n  \"estado\": true,\r\n  \"id_Persona\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55721/api/AgregarCliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"AgregarCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_Cliente\": 1,\r\n  \"nombre\": \"Jorgito\",\r\n  \"genero\": \"M\",\r\n  \"edad\": 38,\r\n  \"identificacion\": \"17052\",\r\n  \"direccion\": \"Ibarrita\",\r\n  \"telefono\": \"953956\",  \r\n  \"password\": \"1234\",\r\n  \"estado\": true,\r\n  \"id_Persona\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55721/api/ActualizarCliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"ActualizarCliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55721/api/eliminarCliente/125",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"eliminarCliente",
+								"125"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Reporte Movimientos x Fechas y Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55721/api/movimiento/obtenerReporteMovimientos?fechaInicial=2022-06-18 00:00&fechaFinal=2022-06-18 23:59&idCliente=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"movimiento",
+								"obtenerReporteMovimientos"
+							],
+							"query": [
+								{
+									"key": "fechaInicial",
+									"value": "2022-06-18 00:00"
+								},
+								{
+									"key": "fechaFinal",
+									"value": "2022-06-18 23:59"
+								},
+								{
+									"key": "idCliente",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movimientos x Id_Movimiento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55721/api/movimiento/ObtenerMovimientosxId/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"movimiento",
+								"ObtenerMovimientosxId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agegar Movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\": \"2022-06-19T10:45:07.893Z\",\r\n  \"tipo_Movimiento\": \"D\",\r\n  \"valor\": 1200,\r\n  \"saldo\": 0,\r\n  \"id_Cuenta\": 1,\r\n  \"saldo_Inicial\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55721/api/movimiento/AgregarMovimiento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"movimiento",
+								"AgregarMovimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Movimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55721/api/movimiento/EliminarMovimiento/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"movimiento",
+								"EliminarMovimiento",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Movimiento",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Id_Movimiento\": 12,\r\n  \"fecha\": \"2022-06-19T10:45:07.893Z\",\r\n  \"tipo_Movimiento\": \"C\",\r\n  \"valor\": 200,\r\n  \"saldo\": 0,\r\n  \"id_Cuenta\": 1,\r\n  \"saldo_Inicial\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55721/api/movimientos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55721",
+							"path": [
+								"api",
+								"movimientos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
